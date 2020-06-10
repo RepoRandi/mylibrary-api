@@ -1,0 +1,19 @@
+{
+  "name": "libraryapps",
+  "version": "1.0.0",
+  "description": "Create LibraryApps",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RepoRandi/LibraryApps.git"
+  },
+  "author": "Randi Maulana Akbar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RepoRandi/LibraryApps/issues"
+  },
+  "homepage": "https://github.com/RepoRandi/LibraryApps#readme"
+}
