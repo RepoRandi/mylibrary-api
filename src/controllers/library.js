@@ -1,4 +1,3 @@
-const connection = require('../helpers/mysql');
 const helper = require('../helpers/index');
 const productModel = require('../models/library');
 
