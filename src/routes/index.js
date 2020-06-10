@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const productRouter = require('./library');
+const libraryRouter = require('./library');
 
 router.use('/library', libraryRouter);
 
