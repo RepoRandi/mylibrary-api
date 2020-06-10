@@ -2,7 +2,7 @@ const connection = require('../helpers/mysql');
 module.exports = {
     getAllLibraryModel: function () {
         return new Promise((resolve, reject) => {
-            connection.query('SELECT * FROM products', function (error, result) {
+            connection.query('SELECT * FROM mybook', function (error, result) {
                 if (error) {
                     reject(error);
                 };
@@ -12,7 +12,7 @@ module.exports = {
     },
     postLibraryModel: function (setData) {
         return new Promise((resolve, reject) => {
-            connection.query("INSERT INTO products SET ?", setData, function (error, result) {
+            connection.query("INSERT INTO mybook SET ?", setData, function (error, result) {
                 if (error) {
                     reject(error);
                 };
@@ -26,7 +26,7 @@ module.exports = {
     },
     updateLibraryModel: function (setData, id) {
         return new Promise((resolve, reject) => {
-            connection.query("UPDATE products SET ? WHERE id=?", [setData, id], function (error, result) {
+            connection.query("UPDATE mybook SET ? WHERE id=?", [setData, id], function (error, result) {
                 if (error) {
                     reject(error);
                 };
@@ -40,7 +40,7 @@ module.exports = {
     },
     deleteLibraryModel: function (id) {
         return new Promise((resolve, reject) => {
-            connection.query("DELETE FROM products WHERE id=?", id, function (error, result) {
+            connection.query("DELETE FROM mybook WHERE id=?", id, function (error, result) {
                 if (error) {
                     reject(error);
                 };

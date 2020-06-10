@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const libraryController = require('../controllers/library');
 
-router.get('/', libraryController.getAlllibrary);
+router.get('/', libraryController.getAllLibrary);
 
 router.post('/', libraryController.posLibrary);
 
