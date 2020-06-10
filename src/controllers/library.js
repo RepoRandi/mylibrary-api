@@ -1,6 +1,6 @@
 const connection = require('../helpers/mysql');
 const helper = require('../helpers/index');
-const productModel = require('../models/product');
+const productModel = require('../models/library');
 
 module.exports = {
     getAllLibrary: async function (request, response) {
