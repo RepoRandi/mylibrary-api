@@ -1,10 +1,10 @@
 const helper = require('../helpers/index');
-const productModel = require('../models/library');
+const libraryModel = require('../models/library');
 
 module.exports = {
     getAllLibrary: async function (request, response) {
         try {
-            const result = await productModel.getAllLibraryModel();
+            const result = await libraryModel.getAllLibraryModel();
             return helper.response(response, 'success', result, 200);
         } catch (error) {
             console.log(error);
@@ -14,11 +14,7 @@ module.exports = {
     posLibrary: async function (request, response) {
         const setData = request.body;
         try {
-            const result = await productModel.postLibraryModel(setData);
-            const newData = {
-                id: result.insertId,
-                ...setData
-            };
+            const result = await libraryModel.postLibraryModel(setData);
             return helper.response(response, 'success', result, 200);
         } catch (error) {
             console.log(error);
@@ -29,11 +25,7 @@ module.exports = {
         const setData = request.body;
         const id = request.params.id;
         try {
-            const result = await productModel.updateLibraryModel(setData, id);
-            const updateData = {
-                id,
-                ...setData
-            };
+            const result = await libraryModel.updateLibraryModel(setData, id);
             return helper.response(response, 'success', result, 200);
         } catch (error) {
             console.log(error);
@@ -43,10 +35,7 @@ module.exports = {
     deleteLibrary: async function (request, response) {
         const id = request.params.id;
         try {
-            const result = await productModel.deleteLibraryModel(id);
-            const deleteData = {
-                id
-            };
+            const result = await libraryModel.deleteLibraryModel(id);
             return helper.response(response, 'success', result, 200);
         } catch (error) {
             console.log(error);
