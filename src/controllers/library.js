@@ -13,13 +13,14 @@ module.exports = {
     },
     posLibrary: async function (request, response) {
         const setData = request.body;
-        try {
-            const result = await libraryModel.postLibraryModel(setData);
-            return helper.response(response, 'success', result, 200);
-        } catch (error) {
-            console.log(error);
-            return helper.response(response, 'fail', 'Internal Server Error', result, 500);
-        }
+        console.log(request.files);
+        // try {
+        //     const result = await libraryModel.postLibraryModel(setData);
+        //     return helper.response(response, 'success', result, 200);
+        // } catch (error) {
+        //     console.log(error);
+        //     return helper.response(response, 'fail', 'Internal Server Error', result, 500);
+        // }
     },
     updateLibrary: async function (request, response) {
         const setData = request.body;
@@ -41,5 +42,15 @@ module.exports = {
             console.log(error);
             return helper.response(response, 'fail', 'Internal Server Error', result, 500);
         }
-    }
+    },
+    searchLibrary: async function (request, response) {
+        const search = request.query;
+        try {
+            const result = await libraryModel.searchLibraryModel(search);
+            return helper.response(response, 'success', result, 200);
+        } catch (error) {
+            console.log(error);
+            return helper.response(response, 'fail', 'Internal Server Error', result, 500);
+        }
+    },
 };
