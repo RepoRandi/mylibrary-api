@@ -13,14 +13,16 @@ module.exports = {
     },
     posLibrary: async function (request, response) {
         const setData = request.body;
-        console.log(request.files);
-        // try {
-        //     const result = await libraryModel.postLibraryModel(setData);
-        //     return helper.response(response, 'success', result, 200);
-        // } catch (error) {
-        //     console.log(error);
-        //     return helper.response(response, 'fail', 'Internal Server Error', result, 500);
-        // }
+        setData.image = request.file.originalname;
+        console.log(request.file);
+        // console.log(setData);
+        try {
+            const result = await libraryModel.postLibraryModel(setData);
+            return helper.response(response, 'success', result, 200);
+        } catch (error) {
+            console.log(error);
+            return helper.response(response, 'fail', 'Internal Server Error', result, 500);
+        }
     },
     updateLibrary: async function (request, response) {
         const setData = request.body;

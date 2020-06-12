@@ -12,10 +12,7 @@ module.exports = {
     },
     postLibraryModel: function (setData) {
         return new Promise((resolve, reject) => {
-            connection.query("INSERT INTO mybook SET ?", setData, function (
-                error,
-                result
-            ) {
+            connection.query("INSERT INTO mybook SET ?", setData, function (error, result) {
                 if (error) {
                     reject(error);
                 }
@@ -29,21 +26,17 @@ module.exports = {
     },
     updateLibraryModel: function (setData, id) {
         return new Promise((resolve, reject) => {
-            connection.query(
-                "UPDATE mybook SET ? WHERE id=?",
-                [setData, id],
-                function (error, result) {
-                    if (error) {
-                        reject(error);
-                    }
-                    const updateData = {
-                        id,
-                        ...setData,
-                    };
-                    console.log(setData)
-                    resolve(updateData);
+            connection.query("UPDATE mybook SET ? WHERE id=?", [setData, id], function (error, result) {
+                if (error) {
+                    reject(error);
                 }
-            );
+                const updateData = {
+                    id,
+                    ...setData,
+                };
+                console.log(setData)
+                resolve(updateData);
+            });
         });
     },
     deleteLibraryModel: function (id) {
@@ -60,7 +53,7 @@ module.exports = {
     searchLibraryModel: function (data) {
         const search = data.title;
         // console.log(search);
-        // console.log(title);
+        // console.log(data);
         return new Promise((resolve, reject) => {
             connection.query("SELECT * FROM mybook WHERE title=?", search, function (error, result) {
                 if (error) {
