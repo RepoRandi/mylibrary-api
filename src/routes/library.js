@@ -24,7 +24,7 @@ router.get('/', libraryController.getAllLibrary);
 
 router.post('/', upload.single('image'), libraryController.posLibrary);
 
-router.put('/:id', libraryController.updateLibrary);
+router.put('/:id', upload.single('image'), libraryController.updateLibrary);
 
 router.delete('/:id', libraryController.deleteLibrary);
 

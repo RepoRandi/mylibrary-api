@@ -26,6 +26,7 @@ module.exports = {
     },
     updateLibrary: async function (request, response) {
         const setData = request.body;
+        setData.image = request.file.originalname;
         const id = request.params.id;
         try {
             const result = await libraryModel.updateLibraryModel(setData, id);
