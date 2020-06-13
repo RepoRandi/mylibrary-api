@@ -13,8 +13,8 @@ module.exports = {
     },
     posLibrary: async function (request, response) {
         const setData = request.body;
-        setData.image = request.file.originalname;
-        console.log(request.file);
+        setData.image = request.file ? request.file.filename : '|';
+        // console.log(request.file);
         // console.log(setData);
         try {
             const result = await libraryModel.postLibraryModel(setData);
@@ -26,7 +26,7 @@ module.exports = {
     },
     updateLibrary: async function (request, response) {
         const setData = request.body;
-        setData.image = request.file.originalname;
+        setData.image = request.file ? request.file.filename : '';
         const id = request.params.id;
         try {
             const result = await libraryModel.updateLibraryModel(setData, id);
