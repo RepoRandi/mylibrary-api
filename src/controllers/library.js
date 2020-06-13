@@ -13,7 +13,7 @@ module.exports = {
     },
     posLibrary: async function (request, response) {
         const setData = request.body;
-        setData.image = request.file ? request.file.filename : '|';
+        setData.image = request.file ? request.file.filename : '';
         // console.log(request.file);
         // console.log(setData);
         try {
