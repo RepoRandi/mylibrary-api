@@ -1,15 +1,5 @@
 # LibraryApps
 
-## Create LibraryApps
-
-### HOW TO INSTALL :
-
-1. Clone this repository
-2. cd LibraryApps
-3. NPM / Yarn install
-
-# VuejsID Blog
-
 ![Build Project](https://github.com/vuejs-id/blog/workflows/Build%20Project/badge.svg) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fblog.vuejs.id%2F) ![Dependencies](https://img.shields.io/david/vuejs-id/blog.svg)
 
 > Create API For Library Applications
