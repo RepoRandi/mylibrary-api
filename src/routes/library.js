@@ -27,4 +27,8 @@ router.delete('/:id', libraryController.deleteLibrary);
 
 router.get('/search', libraryController.searchLibrary);
 
+router.get('/sorting', libraryController.sortingLibrary);
+
+router.get('/page', libraryController.pageLibrary);
+
 module.exports = router;

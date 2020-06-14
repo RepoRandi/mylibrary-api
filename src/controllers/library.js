@@ -56,4 +56,24 @@ module.exports = {
             return helper.response(response, 'fail', 'Internal Server Error', result, 500);
         }
     },
+    sortingLibrary: async function (request, response) {
+        const sorting = request.query;
+        try {
+            const result = await libraryModel.sortingLibraryModel(sorting);
+            return helper.response(response, 'success', result, 200);
+        } catch (error) {
+            console.log(error);
+            return helper.response(response, 'fail', 'Internal Server Error', result, 500);
+        }
+    },
+    pageLibrary: async function (request, response) {
+        const page = request.query;
+        try {
+            const result = await libraryModel.pageLibraryModel(page);
+            return helper.response(response, 'success', result, 200);
+        } catch (error) {
+            console.log(error);
+            return helper.response(response, 'fail', 'Internal Server Error', result, 500);
+        }
+    },
 };

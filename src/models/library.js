@@ -2,7 +2,7 @@ const connection = require("../helpers/mysql");
 module.exports = {
     getAllLibraryModel: function () {
         return new Promise((resolve, reject) => {
-            connection.query("SELECT * FROM mybook", function (error, result) {
+            connection.query("SELECT * FROM mybook JOIN mygenre ON mybook.id_genre=mygenre.id LEFT JOIN myauthor ON mybook.id_author=myauthor.id", function (error, result) {
                 if (error) {
                     reject(error);
                 }
@@ -56,6 +56,28 @@ module.exports = {
         // console.log(data);
         return new Promise((resolve, reject) => {
             connection.query("SELECT * FROM mybook WHERE title=?", search, function (error, result) {
+                if (error) {
+                    reject(error);
+                }
+                resolve(result);
+            });
+        });
+    },
+    sortingLibraryModel: function (dataSort) {
+        const sorting = dataSort.title;
+        return new Promise((resolve, reject) => {
+            connection.query("SELECT * FROM mybook ORDER BY title=? ASC", sorting, function (error, result) {
+                if (error) {
+                    reject(error);
+                }
+                resolve(result);
+            });
+        });
+    },
+    pageLibraryModel: function (dataPage) {
+        const page = dataPage.title;
+        return new Promise((resolve, reject) => {
+            connection.query("SELECT * FROM mybook limit 2", page, function (error, result) {
                 if (error) {
                     reject(error);
                 }
