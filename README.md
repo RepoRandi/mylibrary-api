@@ -20,9 +20,9 @@
 
 ## Development
 
-1. Install deps `yarn`
-2. Run project `yarn develop`, open at `http://localhost:8080`
-3. Build project `yarn build`
+1. Install `NPM`
+2. Run project `NPM develop`, open at `http://localhost:3000`
+3. Build project `NPM build`
 
 ## Menerbitkan Tulisanmu pada Blog Vue.js ID
 
