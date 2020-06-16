@@ -34,7 +34,7 @@ module.exports = {
                     id,
                     ...setData,
                 };
-                console.log(setData)
+                // console.log(updateData)
                 resolve(updateData);
             });
         });
@@ -51,11 +51,10 @@ module.exports = {
         });
     },
     searchLibraryModel: function (data) {
-        const search = data.title;
         // console.log(search);
         // console.log(data);
         return new Promise((resolve, reject) => {
-            connection.query("SELECT * FROM mybook WHERE title=?", search, function (error, result) {
+            connection.query("SELECT * FROM mybook WHERE title=?", data, function (error, result) {
                 if (error) {
                     reject(error);
                 }
@@ -64,9 +63,9 @@ module.exports = {
         });
     },
     sortingLibraryModel: function (dataSort) {
-        const sorting = dataSort.title;
+        const sql = `SELECT * FROM mybook ORDER BY ${dataSort}`;
         return new Promise((resolve, reject) => {
-            connection.query("SELECT * FROM mybook ORDER BY title=? DESC", sorting, function (error, result) {
+            connection.query(sql, function (error, result) {
                 if (error) {
                     reject(error);
                 }
@@ -75,9 +74,12 @@ module.exports = {
         });
     },
     pageLibraryModel: function (dataPage) {
-        const page = dataPage.title;
+        const page = dataPage;
+        const limit = 2;
+        const offset = (page - 1) * limit;
+        console.log(dataPage)
         return new Promise((resolve, reject) => {
-            connection.query("SELECT * FROM mybook limit 2", page, function (error, result) {
+            connection.query("SELECT * FROM mybook LIMIT ? OFFSET ?", [limit, offset], function (error, result) {
                 if (error) {
                     reject(error);
                 }

@@ -3,7 +3,27 @@ const libraryModel = require('../models/library');
 
 module.exports = {
     getAllLibrary: async function (request, response) {
+        const search = request.query.search;
+        const sorting = request.query.sorting;
+        const page = request.query.page;
+        console.log(request.query);
+        console.log(search);
+        console.log(sorting);
+        console.log(page);
+
         try {
+            if (search && !sorting && !page) {
+                const result = await libraryModel.searchLibraryModel(search);
+                return helper.response(response, 'success', result, 200);
+            } else if (sorting && !search && !page) {
+                const result = await libraryModel.sortingLibraryModel(sorting);
+                // console.log(sorting);
+                return helper.response(response, 'success', result, 200);
+            } else if (page && !search && !sorting) {
+                const result = await libraryModel.pageLibraryModel(page);
+                console.log(page);
+                return helper.response(response, 'success', result, 200);
+            }
             const result = await libraryModel.getAllLibraryModel();
             return helper.response(response, 'success', result, 200);
         } catch (error) {
@@ -45,35 +65,5 @@ module.exports = {
             console.log(error);
             return helper.response(response, 'fail', 'Internal Server Error', result, 500);
         }
-    },
-    searchLibrary: async function (request, response) {
-        const search = request.query;
-        try {
-            const result = await libraryModel.searchLibraryModel(search);
-            return helper.response(response, 'success', result, 200);
-        } catch (error) {
-            console.log(error);
-            return helper.response(response, 'fail', 'Internal Server Error', result, 500);
-        }
-    },
-    sortingLibrary: async function (request, response) {
-        const sorting = request.query;
-        try {
-            const result = await libraryModel.sortingLibraryModel(sorting);
-            return helper.response(response, 'success', result, 200);
-        } catch (error) {
-            console.log(error);
-            return helper.response(response, 'fail', 'Internal Server Error', result, 500);
-        }
-    },
-    pageLibrary: async function (request, response) {
-        const page = request.query;
-        try {
-            const result = await libraryModel.pageLibraryModel(page);
-            return helper.response(response, 'success', result, 200);
-        } catch (error) {
-            console.log(error);
-            return helper.response(response, 'fail', 'Internal Server Error', result, 500);
-        }
-    },
+    }
 };
