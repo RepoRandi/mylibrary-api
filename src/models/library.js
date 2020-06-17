@@ -87,4 +87,18 @@ module.exports = {
             });
         });
     },
+    searchSortPageLibraryModel: function (search, sort, pagination) {
+        const page = pagination;
+        const limit = 2;
+        const offset = (page - 1) * limit;
+        console.log('masuk sini')
+        return new Promise((resolve, reject) => {
+            connection.query(`SELECT * FROM mybook WHERE title=${search} ORDER BY ${sort} LIMIT ${limit} OFFSET ${offset}`, function (error, result) {
+                if (error) {
+                    reject(error);
+                }
+                resolve(result);
+            });
+        });
+    },
 };

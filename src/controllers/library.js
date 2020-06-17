@@ -21,14 +21,17 @@ module.exports = {
                 return helper.response(response, 'success', result, 200);
             } else if (page && !search && !sorting) {
                 const result = await libraryModel.pageLibraryModel(page);
-                console.log(page);
+                // console.log(page);
+                return helper.response(response, 'success', result, 200);
+            } else if (search && sorting && page) {
+                const result = await libraryModel.searchSortPageLibraryModel(search, sorting, page);
                 return helper.response(response, 'success', result, 200);
             }
             const result = await libraryModel.getAllLibraryModel();
             return helper.response(response, 'success', result, 200);
         } catch (error) {
             console.log(error);
-            return helper.response(response, 'fail', 'Internal Server Error', result, 500);
+            return helper.response(response, 'fail', 'Internal Server Error', 500);
         }
     },
     posLibrary: async function (request, response) {
