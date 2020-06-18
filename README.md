@@ -5,17 +5,17 @@
 > Create API For Library Applications
 
 ## :memo: Table Of Content
-* [BuiltWith](https://github.com/RepoRandi/LibraryApps#BuiltWith)
+* [BuiltWith](https://github.com/RepoRandi/LibraryApps#Built-With)
 * [Features](https://github.com/RepoRandi/LibraryApps#Features)
 * [Prerequisites](https://github.com/RepoRandi/LibraryApps#Prerequisites)
 * [Development](https://github.com/RepoRandi/LibraryApps#Development)
 * [Live](https://github.com/RepoRandi/LibraryApps#Live)
-* [HttpVerbs](https://github.com/RepoRandi/LibraryApps#HttpVerbs)
+* [HttpVerbs](https://github.com/RepoRandi/LibraryApps#HTTP-Verbs)
 * [Endpoint](https://github.com/RepoRandi/LibraryApps#Endpoint)
 * [Author](https://github.com/RepoRandi/LibraryApps#Author)
 * [License](https://github.com/RepoRandi/LibraryApps#License)
 
-## Built with
+## Built-With
 - [Node.js](http://nodejs.org/) - JavaScript runtime environment
 - [Express.js](https://expressjs.com/) - Web framework
 - [MySQL](https://www.mysql.com/) Database
@@ -53,7 +53,7 @@
 ## Live
 - [https://localhost:3000](https://localhost:3000)
 
-### HTTP Verbs
+### HTTP-Verbs
 
 | Verbs    | Description                                           |
 | -------- | ----------------------------------------------------- |
