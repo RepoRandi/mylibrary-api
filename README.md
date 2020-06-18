@@ -5,12 +5,12 @@
 > Create API For Library Applications
 
 ## :memo: Table Of Content
-* [Built wtih](https://github.com/RepoRandi/LibraryApps#Built With)
+* [BuiltWith](https://github.com/RepoRandi/LibraryApps#Built With)
 * [Features](https://github.com/RepoRandi/LibraryApps#Features)
 * [Prerequisites](https://github.com/RepoRandi/LibraryApps#Prerequisites)
 * [Development](https://github.com/RepoRandi/LibraryApps#Development)
 * [Live](https://github.com/RepoRandi/LibraryApps#Live)
-* [HTTP Verbs](https://github.com/RepoRandi/LibraryApps#HTTP Verbs)
+* [HttpVerbs](https://github.com/RepoRandi/LibraryApps#HTTP Verbs)
 * [Endpoint](https://github.com/RepoRandi/LibraryApps#Endpoint)
 * [Author](https://github.com/RepoRandi/LibraryApps#Author)
 * [License](https://github.com/RepoRandi/LibraryApps#License)
@@ -79,4 +79,4 @@
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/RepoRandi/LibraryApps/blob/master/LICENSE) file for details
 
 ##
-Copyright © 2020 by Randi Maulana Akbar
+Copyright © 2020 By Randi Maulana Akbar
