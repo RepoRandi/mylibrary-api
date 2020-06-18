@@ -6,7 +6,7 @@
 
 ## Live
 
-- [https://blog.vuejs.id/](https://blog.vuejs.id/)
+- [https://localhost:3000/](https://localhost:3000)
 
 ## Development
 
