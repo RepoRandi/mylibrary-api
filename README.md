@@ -14,7 +14,7 @@
 2. Run project `NPM develop`, open at `http://localhost:3000`
 3. Build project `NPM build`
 
-## Menerbitkan Tulisanmu pada Blog Vue.js ID
+<!-- ## Menerbitkan Tulisanmu pada Blog Vue.js ID
 
 Kamu diperbolehkan menerbitkan tulisanmu di blog Vue.js ID 🎉 Berikut adalah beberapa syarat dan cara untuk menerbitkan pada blog Vuejs ID yang perlu dilakukan :
 
@@ -96,6 +96,6 @@ Artikel terjemahan bahasa lain diperbolehkan, cara penulisan sama tetap mengikut
 
 - [gridsome-starter-blog](https://github.com/gridsome/gridsome-starter-blog)
 
----
+--- -->
 
 Copyright © 2020 by Randi Maulana Akbar

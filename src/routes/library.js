@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const libraryController = require('../controllers/library');
+const authMiddleware = require('../middleware/auth');
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -17,7 +18,7 @@ const upload = multer({
     storage: storage
 });
 
-router.get('/', libraryController.getAllLibrary);
+router.get('/', authMiddleware.verifyJwtToken, libraryController.getAllLibrary);
 
 router.post('/', upload.single('image'), libraryController.posLibrary);
 
