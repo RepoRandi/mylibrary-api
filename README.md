@@ -5,12 +5,12 @@
 > Create API For Library Applications
 
 ## :memo: Table Of Content
-* [BuiltWith](https://github.com/RepoRandi/LibraryApps#Built-With)
+* [Built-With](https://github.com/RepoRandi/LibraryApps#Built-With)
 * [Features](https://github.com/RepoRandi/LibraryApps#Features)
 * [Prerequisites](https://github.com/RepoRandi/LibraryApps#Prerequisites)
 * [Development](https://github.com/RepoRandi/LibraryApps#Development)
 * [Live](https://github.com/RepoRandi/LibraryApps#Live)
-* [HttpVerbs](https://github.com/RepoRandi/LibraryApps#HTTP-Verbs)
+* [HTTP-Verbs](https://github.com/RepoRandi/LibraryApps#HTTP-Verbs)
 * [Endpoint](https://github.com/RepoRandi/LibraryApps#Endpoint)
 * [Author](https://github.com/RepoRandi/LibraryApps#Author)
 * [License](https://github.com/RepoRandi/LibraryApps#License)
