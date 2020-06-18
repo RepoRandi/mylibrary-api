@@ -97,5 +97,5 @@ Artikel terjemahan bahasa lain diperbolehkan, cara penulisan sama tetap mengikut
 - [gridsome-starter-blog](https://github.com/gridsome/gridsome-starter-blog)
 
 --- -->
-
+##
 Copyright © 2020 by Randi Maulana Akbar
