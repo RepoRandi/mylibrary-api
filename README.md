@@ -38,7 +38,7 @@
 ## Development
 > Clone Repo And Install Package
 1. Clone this repository:
-    `git clone https://https://github.com/RepoRandi/LibraryApps`
+    `git clone https://https://github.com/RepoRandi/LibraryApps-API`
 2. Install depedencies:
     - `cd LibraryApps` 
     - `npm install`
