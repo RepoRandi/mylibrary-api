@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const authMiddleware = require("../middleware/auth");
 const authorController = require("../controllers/author");
 
 router.get("/", authMiddleware.verifyJwtToken, authorController.getAuthor);

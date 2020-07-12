@@ -1,4 +1,4 @@
-const helper = require("../helper/index");
+const helper = require("../helpers/index");
 const authorModel = require("../models/author");
 
 module.exports = {
