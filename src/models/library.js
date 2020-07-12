@@ -13,6 +13,20 @@ module.exports = {
       );
     });
   },
+  detailLibraryModel: (id) => {
+    return new Promise((resolve, reject) => {
+      connection.query(
+        "SELECT mybook.id as id, mybook.title as title, mybook.description as description, mybook.image as image, mygenre.name as genre,myauthor.name as author, mybook.status as status, mybook.created_at as created_at, mybook.updated_at as updated_at FROM mybook INNER JOIN mygenre ON mybook.id_genre = mygenre.id INNER JOIN myauthor ON mybook.id_author = myauthor.id WHERE mybook.id = ?",
+        id,
+        (error, result) => {
+          if (error) {
+            reject(error);
+          }
+          resolve(result);
+        }
+      );
+    });
+  },
   postLibraryModel: function (setData) {
     return new Promise((resolve, reject) => {
       connection.query("INSERT INTO mybook SET ?", setData, function (
