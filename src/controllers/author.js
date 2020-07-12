@@ -2,7 +2,7 @@ const helper = require("../helper/index");
 const authorModel = require("../models/author");
 
 module.exports = {
-  getAuthors: async (req, res) => {
+  getAuthor: async (req, res) => {
     try {
       const result = await authorModel.getAuthorModel();
       return helper.response(res, "success", result, 200);
@@ -11,7 +11,7 @@ module.exports = {
       return helper.response(res, "fail", "Internal server Error", 500);
     }
   },
-  authorDetail: async (req, res) => {
+  detailAuthor: async (req, res) => {
     const id = req.params.id;
     try {
       const result = await authorModel.authorDetailModel(id);

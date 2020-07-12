@@ -2,7 +2,7 @@ const helper = require("../helpers/index");
 const genreModel = require("../models/genre");
 
 module.exports = {
-  getGenres: async (req, res) => {
+  getGenre: async (req, res) => {
     try {
       const result = await genreModel.getGenreModel();
       return helper.response(res, "success", result, 200);
@@ -11,10 +11,10 @@ module.exports = {
       return helper.response(res, "fail", "Internal server Error", 500);
     }
   },
-  genreDetail: async (req, res) => {
+  detailGenre: async (req, res) => {
     const id = req.params.id;
     try {
-      const result = await genreModel.genreDetailModel(id);
+      const result = await genreModel.detailGenreModel(id);
       return helper.response(res, "success", result, 200);
     } catch (error) {
       console.log(error);

@@ -23,6 +23,12 @@ const upload = multer({
 
 router.get("/", authMiddleware.verifyJwtToken, libraryController.getAllLibrary);
 
+router.get(
+  "/:id",
+  authMiddleware.verifyJwtToken,
+  libraryController.detailLibrary
+);
+
 router.post(
   "/",
   authMiddleware.verifyJwtToken,
