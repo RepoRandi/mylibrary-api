@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const connection = require("./src/helpers/mysql");
 const routes = require("./src/routes/index");
 const cors = require("cors");
+app.use(express.static("images"));
 
 connection.connect(function (error) {
   if (error) throw error;
