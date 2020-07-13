@@ -1,101 +1,83 @@
-# LibraryApps
+# LibraryApps-API
 
 ![Build Project](https://github.com/vuejs-id/blog/workflows/Build%20Project/badge.svg) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fblog.vuejs.id%2F) ![Dependencies](https://img.shields.io/david/vuejs-id/blog.svg)
 
 > Create API For Library Applications
+## :memo: Table Of Content
+* [Built-With](https://github.com/RepoRandi/LibraryApps#Built-With)
+* [Features](https://github.com/RepoRandi/LibraryApps#Features)
+* [Prerequisites](https://github.com/RepoRandi/LibraryApps#Prerequisites)
+* [Development](https://github.com/RepoRandi/LibraryApps#Development)
+* [Live](https://github.com/RepoRandi/LibraryApps#Live)
+* [HTTP-Verbs](https://github.com/RepoRandi/LibraryApps#HTTP-Verbs)
+* [Endpoint](https://github.com/RepoRandi/LibraryApps#Endpoint)
+* [Author](https://github.com/RepoRandi/LibraryApps#Author)
+* [License](https://github.com/RepoRandi/LibraryApps#License)
 
-## Live
+## Built-With
+- [Node.js](http://nodejs.org/) - JavaScript runtime environment
+- [Express.js](https://expressjs.com/) - Web framework
+- [MySQL](https://www.mysql.com/) Database
+- [Bcrypt](https://github.com/kelektiv/node.bcrypt.js) - Password Hashing
+- [JWT](https://jwt.io/) - Login/Register authentication
 
-- [https://blog.vuejs.id/](https://blog.vuejs.id/)
+## Features
+- [x] Login/Register AUTH With JWT
+- [x] Password hashing With Bcript
+- [x] CRUD
+- [x] Search
+- [x] Sort
+- [x] Pagination
+- [x] Cors
+
+## Prerequisites
+- Node.js installed on the local machine
+- MySQL intalled on the local machine (ex. XAMPP)
 
 ## Development
+> Clone Repo And Install Package
+1. Clone this repository:
+    `git clone https://https://github.com/RepoRandi/LibraryApps-API`
+2. Install depedencies:
+    - `cd LibraryApps` 
+    - `npm install`
+3. Start XAMPP
+4. Database configuration:
+    * Open http://localhost/phpmyadmin in the browser
+    * Create a new table with the name `LibraryApss`
+    * Import database to current table, select `libraryapps.sql` file from project folder
+5. Start the server:
+    * Open Terminal `npm start`
 
-1. Install `NPM`
-2. Run project `NPM develop`, open at `http://localhost:3000`
-3. Build project `NPM build`
+## Live
+- [https://localhost:3000](https://localhost:3000)
 
-<!-- ## Menerbitkan Tulisanmu pada Blog Vue.js ID
+### HTTP-Verbs
 
-Kamu diperbolehkan menerbitkan tulisanmu di blog Vue.js ID 🎉 Berikut adalah beberapa syarat dan cara untuk menerbitkan pada blog Vuejs ID yang perlu dilakukan :
+| Verbs    | Description                                           |
+| -------- | ----------------------------------------------------- |
+| `GET`    | Request data from the server                          |
+| `POST`   | Sending data to the server                            |
+| `PUT`    | Change all data that is already on the server         |
+| `PATCH`  | Change Most of the data already exists on the server  |
+| `DELETE` | Delete data that is already on the server             |
 
-### Cara Menerbitkan Tulisanmu
+### Endpoint
+| Verbs     | Description      |
+| --------- | -----------------|
+| `/book`  | Book             |
+| `/auth`   | Auth             |
+| `/author`| Author           |
+| `/genre` | Genre            |
+| `/user`  | User             |
 
-Unuk _propose_ tulisan yang ingin kamu terbitkan, kamu harus membuat [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) dimana nanti artikel kamu akan [disunting](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-collaborative-development-models) oleh **@vuejs-id/blogs-team**.
+## Author
+- [Randi Maulana Akbar](https://www.linkedin.com/in/randi-maulana-akbar/)
 
-Tulisan akan diterbitkan jika **@vuejs-id/blogs-team** sudah sepakat. Untuk memudahkan pencarian _pull-request_ / submisi artikel harap judul _pull-request_ dituliskan seperti berikut.
+## License
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/RepoRandi/LibraryApps/blob/master/LICENSE) file for details
 
-```md
-Article Submission - [Judul Artikel yang Kamu Tulis]
-```
+##
+Copyright © 2020 By Randi Maulana Akbar
 
-### Syarat - Syarat Artikel
 
-Berikut adalah syarat - syarat yang **perlu** dipenuhi dan diperhatikan agar artikelmu diterbitkan:
-
-- Isi artikel berkaitan dengan Vue.js / web development pada umumnya, baik itu studi kasus, langkah langkah (tutorial), tips dan trick, maupun opini
-- Jika artikel pernah diterbitkan pada publikasi lain sematkan link publikasi tersebut **pada paragraf akhir** artikel kamu **bukan diawal** tulisan artikel kamu
-- Artikel boleh merupakan translasi dari artikel berbahasa lain
-- Berbahasa Indonesia
-- Artikel tidak mengandung SARA, baik itu dalam konteks _jokes_ atau apapun
-
-Berikut untuk cara teknikal yang perlu diperhatikan saat menulis:
-
-#### Judul, Tag, dan Konteks Artikelmu
-
-Harap lengkapi konteks artikel kamu pada header markdown, contoh:
-
-```md
----
-title: Membuat Vue.js Inline SVG Icon Component
-date: 2018-02-07
-author: mazipan
-published: true
-tags: ["Tutorial", "Icon", "SVG"]
-series: false
-cover_image: ./images/membuat-vuejs-inline-svg-icon-component/cover.png
-canonical_url: false
-description: "Belajar langkah demi langkah membuat Vue.js inline SVG icon component"
----
-```
-
-1. **title**: berisi judul artikel
-2. **date**: tanggal penerbitan artikel
-3. **author**: berisi nama penulis (bila nama kalian belum pernah ada, maka tambahkan di file `authors.js`)
-4. **published**: bernilai `true` atau `false`, `true` berarti artikel yang Kamu kirim akan dipublikasi dan `false` berarti artikel yang Kamu kirim belum dipublikasi.
-5. **tags**: bernilai array yang berisi tag artikel
-6. **series**: bernilai `true` atau `false`, `true` berarti artikel yang Kamu kirim memiliki seri, misal _Pengetahuan Dasar Vue.js Bagian 1_, kemudian nanti Kamu akan mempublikasikan artikel baru bagian 2. Sedangkan `false` berarti artikel yang Kamu kirim tidak memiliki seri atau artikel tunggal.
-7. **cover_image**: berisi url gambar sebagai cover artikel. Sebagai contoh jika Kamu mengirimkan artikel dengan judul `Pengetahuan Dasar Vue.js Bagian 1`, maka gambar untuk artikel tersebut sebaiknya berada pada:
-   `content/posts/images/pengetahuan-dasar-vuejs-bagian-1/cover.png` dan isi dari bagian `cover_image` adalah `./images/pengetahuan-dasar-vuejs-bagian-1/cover.png`
-8. **canonical_url**: bernilai `true` atau `false`, `true` berarti artikel yang Kamu kirim pernah diterbitkan di tempat lain dan `false` berarti belum pernah diterbitkan.
-9. **description**: berisi deskripsi singkat mengenai artikel yang Kamu kirimkan.
-
-#### Image & File Markdown
-
-Tulisan ditulis pada folder `content/post`. dalam bentuk markdown, contoh dapat kamu lihat pada repo. Harap menamai file markdown-mu sama seperti judul, _lowercase_ dan spasi digantikan dengan _-_ (_dash_).
-
-```md
-...
-title: Membuat Vue.js Inline SVG Icon Component
-
----
-
-nama file :
-
-membuat-vuejs-inline-svg-icon-component.md
-```
-
-Jika anda menempatkan image anda pada repo blog, maka taruhlah dalam folder `content/post/images/[nama file markdown anda]`. Jika dimungkinkan anda memiliki gambar yang sama dan digunakan pada beberapa artikel anda yang berbeda, maka gunakanan folder `content/images/shared/`.
-
-#### Artikel terjemahan dari bahasa lain
-
-Artikel terjemahan bahasa lain diperbolehkan, cara penulisan sama tetap mengikuti artikel pada blog ini. Kamu harus menyematkan link asli artikel tersebut pada paragraf kedua di file markdown artikelmu.
-
-🎉 itu adalah syarat - syarat yang perlu kamu penuhi dan perhatikan untuk menerbitkan tulisan pada blog ini. Selamat menulis! Mari tingkatkan sumber literasi pemrograman berbahasa Indonesia agar mempermudah dan membantu semua orang belajar pemrograman 😄 💻
-
-## Based on Starter
-
-- [gridsome-starter-blog](https://github.com/gridsome/gridsome-starter-blog)
-
---- -->
-
-Copyright © 2020 by Randi Maulana Akbar
