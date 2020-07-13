@@ -7,7 +7,7 @@ router.get("/", authMiddleware.verifyJwtToken, genreController.getGenre);
 
 router.get("/:id", authMiddleware.verifyJwtToken, genreController.detailGenre);
 
-router.post("/genre", authMiddleware.verifyJwtToken, genreController.addGenre);
+router.post("/", authMiddleware.verifyJwtToken, genreController.addGenre);
 
 router.put("/:id", authMiddleware.verifyJwtToken, genreController.updateGenre);
 
