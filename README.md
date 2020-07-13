@@ -4,20 +4,20 @@
 
 > Create API For Library Applications
 ## :memo: Table Of Content
-* [Built-With](https://github.com/RepoRandi/LibraryApps#Built-With)
-* [Features](https://github.com/RepoRandi/LibraryApps#Features)
-* [Prerequisites](https://github.com/RepoRandi/LibraryApps#Prerequisites)
-* [Development](https://github.com/RepoRandi/LibraryApps#Development)
-* [Live](https://github.com/RepoRandi/LibraryApps#Live)
-* [HTTP-Verbs](https://github.com/RepoRandi/LibraryApps#HTTP-Verbs)
-* [Endpoint](https://github.com/RepoRandi/LibraryApps#Endpoint)
-* [Author](https://github.com/RepoRandi/LibraryApps#Author)
-* [License](https://github.com/RepoRandi/LibraryApps#License)
+* [Built-With](https://github.com/RepoRandi/LibraryApps-API#Built-With)
+* [Features](https://github.com/RepoRandi/LibraryApps-API#Features)
+* [Prerequisites](https://github.com/RepoRandi/LibraryApps-API#Prerequisites)
+* [Development](https://github.com/RepoRandi/LibraryApps-API#Development)
+* [Live](https://github.com/RepoRandi/LibraryApps-API#Live)
+* [HTTP-Verbs](https://github.com/RepoRandi/LibraryApps-API#HTTP-Verbs)
+* [Endpoint](https://github.com/RepoRandi/LibraryApps-API#Endpoint)
+* [Author](https://github.com/RepoRandi/LibraryApps-API#Author)
+* [License](https://github.com/RepoRandi/LibraryApps-API#License)
 
 ## Built-With
 - [Node.js](http://nodejs.org/) - JavaScript runtime environment
 - [Express.js](https://expressjs.com/) - Web framework
-- [MySQL](https://www.mysql.com/) Database
+- [MySQL](https://www.mysql.com/) - Database
 - [Bcrypt](https://github.com/kelektiv/node.bcrypt.js) - Password Hashing
 - [JWT](https://jwt.io/) - Login/Register authentication
 
