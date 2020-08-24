@@ -4,15 +4,15 @@
 
 > Create API For Library Applications
 ## :memo: Table Of Content
-* [Built-With](https://github.com/RepoRandi/LibraryApps-API#Built-With)
-* [Features](https://github.com/RepoRandi/LibraryApps-API#Features)
-* [Prerequisites](https://github.com/RepoRandi/LibraryApps-API#Prerequisites)
-* [Development](https://github.com/RepoRandi/LibraryApps-API#Development)
-* [Live](https://github.com/RepoRandi/LibraryApps-API#Live)
-* [HTTP-Verbs](https://github.com/RepoRandi/LibraryApps-API#HTTP-Verbs)
-* [Endpoint](https://github.com/RepoRandi/LibraryApps-API#Endpoint)
-* [Author](https://github.com/RepoRandi/LibraryApps-API#Author)
-* [License](https://github.com/RepoRandi/LibraryApps-API#License)
+* [Built-With](https://github.com/RepoRandi/Mylibrary-API#Built-With)
+* [Features](https://github.com/RepoRandi/Mylibrary-API#Features)
+* [Prerequisites](https://github.com/RepoRandi/Mylibrary-API#Prerequisites)
+* [Development](https://github.com/RepoRandi/Mylibrary-API#Development)
+* [Live](https://github.com/RepoRandi/Mylibrary-API#Live)
+* [HTTP-Verbs](https://github.com/RepoRandi/Mylibrary-API#HTTP-Verbs)
+* [Endpoint](https://github.com/RepoRandi/Mylibrary-API#Endpoint)
+* [Author](https://github.com/RepoRandi/Mylibrary-API#Author)
+* [License](https://github.com/RepoRandi/Mylibrary-API#License)
 
 ## Built-With
 - [Node.js](http://nodejs.org/) - JavaScript runtime environment
